@@ -1,0 +1,17 @@
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark" # or "default", "mint", "contrast"
+
+title: "Eugenio's Portfolio"
+description: "Electrical Engineer & Robotics Portfolio"
+url: "https://eugeniopasos.github.io"
+
+plugins:
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "single"
+      author_profile: true
