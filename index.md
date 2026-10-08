@@ -14,7 +14,7 @@ feature_row:
     url: "/projects/rover/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/pick_and_place.png
+  - image_path: /assets/images/pick_and_place.jpg
     alt: "Manipulator"
     title: "Autonomous Pick and Place Robot"
     excerpt: "Pick and place robot sorting balls into different bins using OpenCV, IK, and "
