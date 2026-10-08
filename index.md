@@ -20,7 +20,14 @@ feature_row:
     excerpt: "Pick and place robot sorting balls into different bins using OpenCV, IK, and "
     url: "/projects/pick_and_place/"
     btn_class: "btn--primary"
-    btn_label: "Learn More"    
+    btn_label: "Learn More"
+  - image_path: /assets/images/mock_drive.jpg
+    alt: "Mock Driving Simulator"
+    title: "Mock Driving Simulator"
+    excerpt: "Embedded STM32 Project using CAN, SPI, I2C"
+    url: "/projects/mock_driving_simulator/"
+    btn_class: "btn--primary"
+    btn_label: "Learn More"     
 ---
 
 Here is a brief introduction to my work, background, and projects.
