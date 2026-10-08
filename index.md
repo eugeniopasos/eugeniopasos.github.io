@@ -1,10 +1,4 @@
 ---
-layout: home
-author_profile: true
----
-Here is a brief introduction to my work, background, and projects.
-
----
 layout: single
 author_profile: true
 feature_row:
@@ -21,6 +15,8 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn More"
 ---
+
+Here is a brief introduction to my work, background, and projects.
 
 ## Featured Projects
 
