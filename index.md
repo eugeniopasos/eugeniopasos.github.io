@@ -13,7 +13,7 @@ feature_row:
     url: "/projects/teleop/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/AMR.png
+  - image_path: /assets/images/AMR.jpg
     alt: "Mapping Rover"
     title: "Autonomous Mapping Rover"
     excerpt: "Indoor mapping robot featuring LiDAR, IMU, slam_toolbox, and Nav2 navigation stack."
