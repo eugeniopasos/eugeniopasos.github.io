@@ -21,7 +21,7 @@ feature_row:
     url: "/projects/pick_and_place/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/mock_drive.jpg
+  - image_path: /assets/images/mock_driving.png
     alt: "Mock Driving Simulator"
     title: "Mock Driving Simulator"
     excerpt: "Embedded STM32 Project using CAN, SPI, I2C"
