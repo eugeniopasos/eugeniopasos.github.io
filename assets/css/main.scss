@@ -5,28 +5,28 @@
 @import "minimal-mistakes";
 
 /* ==========================================================================
-   Soothing Greenish-Blue Theme & Optimized Tile Layout
+   Soothing Deep Oceanic Blue Theme & Refined Layout
    ========================================================================== */
 
 :root {
-  /* Soothing Oceanic Teal Palette */
-  --bg-primary: #09181b;
-  --bg-surface: #0d2328;
-  --bg-taskbar: #061316;
-  --accent-teal: #2dd4bf;
-  --accent-cyan: #06b6d4;
-  --accent-mint: #a7f3d0;
-  --card-bg: rgba(13, 35, 40, 0.82);
-  --card-border: rgba(45, 212, 191, 0.2);
-  --card-hover-border: rgba(45, 212, 191, 0.55);
-  --text-head: #f0fdfa;
+  /* Soothing Midnight Ocean Blue Palette */
+  --bg-primary: #0a1626;
+  --bg-taskbar: #060f1c;        /* Same blue family, distinct deeper shade */
+  --bg-surface: #0f233d;
+  --accent-blue: #38bdf8;       /* Soothing sky/ocean blue */
+  --accent-cyan: #22d3ee;
+  --card-bg: rgba(14, 28, 48, 0.85);
+  --card-border: rgba(56, 189, 248, 0.2);
+  --card-hover-border: rgba(56, 189, 248, 0.55);
+  --text-head: #f0f9ff;
+  --text-link: #bae6fd;
   --text-body: #cbd5e1;
 }
 
-/* Base Body & Background */
+/* Base Body & Main Background */
 html, body {
   background-color: var(--bg-primary) !important;
-  background: radial-gradient(circle at 15% 15%, #0f2b32 0%, #09181b 50%, #061214 100%) fixed !important;
+  background: radial-gradient(circle at 18% 18%, #112640 0%, #0a1626 55%, #060e1a 100%) fixed !important;
   color: var(--text-body) !important;
 }
 
@@ -37,110 +37,214 @@ html, body {
   background: transparent !important;
 }
 
+/* Hide duplicate / empty page headers on single-page layouts like homepage */
+.page__title:empty,
+.layout--single > .page__header,
+.layout--single:has(.hero-banner) .page__header {
+  display: none !important;
+}
+
 /* ==========================================================================
-   Compact Soothing Greenish-Blue Taskbar / Masthead
+   Taskbar / Masthead: Deep Midnight Blue, Compact Height, No Overlaps
    ========================================================================== */
 
 .masthead {
   background-color: var(--bg-taskbar) !important;
-  border-bottom: 1px solid rgba(45, 212, 191, 0.22) !important;
-  box-shadow: 0 4px 18px rgba(3, 12, 14, 0.5) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+  background: var(--bg-taskbar) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.22) !important;
+  box-shadow: 0 4px 18px rgba(3, 8, 16, 0.6) !important;
   padding: 0 !important;
   min-height: unset !important;
+  z-index: 50;
 }
 
 .masthead__inner-wrap {
-  padding: 0.35rem 1.25rem !important; /* Slimmer, compact taskbar height */
+  background-color: transparent !important;
+  background: transparent !important;
+  padding: 0.3rem 1.25rem !important; /* Compact, slim height */
   max-width: 1280px !important;
   margin: 0 auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  min-height: 48px !important;
+  min-height: 44px !important;
 }
 
 .masthead__menu {
+  background-color: transparent !important;
+  background: transparent !important;
   margin: 0 !important;
   padding: 0 !important;
   width: 100% !important;
-
-  .masthead__menu-wrapper {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-  }
-
-  ul.visible-links {
-    display: flex !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-  }
 }
 
-/* Brand Name in Masthead: "Eugenio Pasos - Robotics and Electrical Engineer" */
-.masthead__menu-item--lg {
-  margin-right: 1.5rem !important;
+/* Greedy Nav overrides (eliminates the default white background) */
+.greedy-nav {
+  background-color: var(--bg-taskbar) !important;
+  background: var(--bg-taskbar) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  min-height: 44px !important;
   padding: 0 !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.01em !important;
-  white-space: nowrap !important;
+  margin: 0 !important;
+  width: 100% !important;
 
-  a {
-    font-size: 1.05rem !important;
-    font-weight: 700 !important;
+  /* Brand Title: Eugenio Pasos - Robotics and Electrical Engineer */
+  .site-title {
+    background-color: transparent !important;
+    background: transparent !important;
     color: var(--text-head) !important;
+    font-size: 1.02rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
+    padding: 0.25rem 0 !important;
+    margin-right: auto !important;
     text-decoration: none !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
     transition: color 0.2s ease !important;
 
     &:hover {
-      color: var(--accent-teal) !important;
-    }
-  }
-}
-
-/* Navigation Links */
-.masthead__menu-item {
-  display: inline-flex !important;
-  align-items: center !important;
-  padding: 0 !important;
-  margin: 0 0.3rem !important;
-  line-height: 1 !important;
-
-  a {
-    padding: 0.3rem 0.65rem !important;
-    font-size: 0.92rem !important;
-    font-weight: 500 !important;
-    color: var(--accent-mint) !important;
-    border-radius: 6px !important;
-    text-decoration: none !important;
-    transition: all 0.2s ease !important;
-
-    &:hover {
-      color: #ffffff !important;
-      background: rgba(45, 212, 191, 0.18) !important;
+      color: var(--accent-blue) !important;
     }
   }
 
-  &--active a {
-    color: #ffffff !important;
-    background: rgba(45, 212, 191, 0.25) !important;
-    font-weight: 600 !important;
+  /* REMOVE duplicate subtitle below name that causes overlapping */
+  .site-subtitle {
+    display: none !important;
+  }
+
+  /* Visible Navigation Links */
+  .visible-links {
+    background-color: transparent !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+
+    li {
+      background-color: transparent !important;
+      background: transparent !important;
+      margin: 0 0.25rem !important;
+      padding: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+
+      a {
+        background-color: transparent !important;
+        background: transparent !important;
+        color: var(--text-link) !important;
+        font-size: 0.9rem !important;
+        font-weight: 500 !important;
+        padding: 0.25rem 0.65rem !important;
+        border-radius: 5px !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
+
+        &:hover {
+          color: #ffffff !important;
+          background: rgba(56, 189, 248, 0.18) !important;
+        }
+      }
+    }
+  }
+
+  /* Dropdown Links for responsive screens */
+  .hidden-links {
+    background: var(--bg-taskbar) !important;
+    border: 1px solid rgba(56, 189, 248, 0.25) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7) !important;
+
+    a {
+      color: var(--text-link) !important;
+      padding: 0.5rem 1rem !important;
+
+      &:hover {
+        background: rgba(56, 189, 248, 0.15) !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  /* Responsive hamburger button */
+  button {
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-link) !important;
+    padding: 0.3rem 0.5rem !important;
+    cursor: pointer !important;
+
+    .navicon {
+      background: var(--text-link) !important;
+
+      &::before,
+      &::after {
+        background: var(--text-link) !important;
+      }
+    }
   }
 }
 
 /* Footer Styling */
 .page__footer {
-  background-color: #051012 !important;
-  border-top: 1px solid rgba(45, 212, 191, 0.15) !important;
+  background-color: #040a14 !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.15) !important;
   color: #94a3b8 !important;
 
   a {
-    color: var(--accent-teal) !important;
+    color: var(--accent-blue) !important;
+  }
+}
+
+/* ==========================================================================
+   Hero Intro Banner: Clean Proportions, Adjusted White Heading Size
+   ========================================================================== */
+
+.hero-banner {
+  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.08), transparent 50%),
+              rgba(11, 24, 42, 0.88);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 14px;
+  padding: 1.75rem 1.85rem;
+  margin-bottom: 2.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  /* Reduced initial white headline size */
+  h1 {
+    font-size: 1.42rem !important; /* Balanced, comfortable font size */
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.75rem !important;
+    letter-spacing: -0.01em !important;
+    color: var(--text-head) !important;
+  }
+
+  .hero-tagline {
+    font-size: 0.88rem !important;
+    color: var(--accent-blue) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    margin-bottom: 0.4rem !important;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #cbd5e1 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
   }
 }
 
@@ -182,11 +286,10 @@ html, body {
   &:hover {
     transform: translateY(-4px) !important;
     border-color: var(--card-hover-border) !important;
-    box-shadow: 0 10px 30px rgba(6, 30, 36, 0.7), 0 0 16px rgba(45, 212, 191, 0.15) !important;
+    box-shadow: 0 10px 30px rgba(4, 14, 28, 0.7), 0 0 16px rgba(56, 189, 248, 0.2) !important;
   }
 }
 
-/* Inner container for archive item */
 .feature__item .archive__item {
   display: flex !important;
   flex-direction: column !important;
@@ -195,7 +298,7 @@ html, body {
   margin: 0 !important;
 }
 
-/* Teaser Images: Landscape Banner (16:9), Not Tall Portrait */
+/* Widescreen Landscape Images (16:9), proportional dimensions */
 .feature__item-teaser,
 .feature__item .archive__item-teaser {
   width: 100% !important;
@@ -203,8 +306,8 @@ html, body {
   aspect-ratio: 16 / 9 !important;
   overflow: hidden !important;
   border-radius: 8px !important;
-  background-color: #051417 !important;
-  border: 1px solid rgba(45, 212, 191, 0.15) !important;
+  background-color: #050d18 !important;
+  border: 1px solid rgba(56, 189, 248, 0.15) !important;
   margin-bottom: 1rem !important;
   flex-shrink: 0 !important;
 
@@ -221,7 +324,7 @@ html, body {
   }
 }
 
-/* Card Body: Flex column that expands to equalize height */
+/* Flexible card body to align buttons at equal heights */
 .feature__item .archive__item-body {
   display: flex !important;
   flex-direction: column !important;
@@ -242,12 +345,11 @@ html, body {
     text-decoration: none !important;
 
     &:hover {
-      color: var(--accent-teal) !important;
+      color: var(--accent-blue) !important;
     }
   }
 }
 
-/* Excerpt: Flexible height to align bottom buttons evenly */
 .feature__item .archive__item-excerpt {
   color: #94a3b8 !important;
   font-size: 0.92rem !important;
@@ -256,7 +358,6 @@ html, body {
   flex: 1 1 auto !important;
 }
 
-/* Action button pinned to the bottom of the card */
 .feature__item .archive__item-body p:last-child {
   margin-top: auto !important;
   margin-bottom: 0 !important;
@@ -267,7 +368,7 @@ html, body {
    ========================================================================== */
 
 .btn--primary {
-  background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%) !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 6px !important;
@@ -277,19 +378,19 @@ html, body {
   transition: all 0.25s ease !important;
   display: inline-block;
   text-decoration: none !important;
-  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.35);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
 
   &:hover {
-    background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%) !important;
+    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%) !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(45, 212, 191, 0.45);
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45);
   }
 }
 
 .btn--inverse {
-  background: rgba(13, 37, 43, 0.85) !important;
-  color: #ccfbf1 !important;
-  border: 1px solid rgba(45, 212, 191, 0.35) !important;
+  background: rgba(15, 30, 52, 0.85) !important;
+  color: #e0f2fe !important;
+  border: 1px solid rgba(56, 189, 248, 0.32) !important;
   border-radius: 6px !important;
   padding: 0.55rem 1.2rem !important;
   font-weight: 600 !important;
@@ -299,56 +400,10 @@ html, body {
   text-decoration: none !important;
 
   &:hover {
-    border-color: var(--accent-teal) !important;
+    border-color: var(--accent-blue) !important;
     color: #ffffff !important;
-    background: rgba(20, 55, 64, 0.9) !important;
+    background: rgba(22, 45, 78, 0.9) !important;
     transform: translateY(-2px);
-  }
-}
-
-/* ==========================================================================
-   Hero Intro Banner
-   ========================================================================== */
-
-.hero-banner {
-  background: radial-gradient(circle at top right, rgba(45, 212, 191, 0.14), transparent 50%),
-              radial-gradient(circle at bottom left, rgba(6, 182, 212, 0.1), transparent 50%),
-              rgba(10, 27, 32, 0.88);
-  border: 1px solid rgba(45, 212, 191, 0.25);
-  border-radius: 16px;
-  padding: 2.25rem 2rem;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-
-  h1 {
-    font-size: 2.1rem;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.02em;
-    color: var(--text-head);
-  }
-
-  .hero-tagline {
-    font-size: 1.15rem;
-    color: var(--accent-teal);
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.02rem;
-    line-height: 1.65;
-    color: #cbd5e1;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin-top: 1.25rem;
   }
 }
 
@@ -364,8 +419,8 @@ html, body {
 }
 
 .stat-card {
-  background: rgba(12, 33, 38, 0.7);
-  border: 1px solid rgba(45, 212, 191, 0.18);
+  background: rgba(14, 28, 48, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.18);
   border-radius: 10px;
   padding: 1.2rem;
   text-align: center;
@@ -373,13 +428,13 @@ html, body {
 
   &:hover {
     transform: translateY(-3px);
-    border-color: rgba(45, 212, 191, 0.45);
+    border-color: rgba(56, 189, 248, 0.45);
   }
 
   .stat-number {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--accent-teal);
+    color: var(--accent-blue);
     line-height: 1.1;
     margin-bottom: 0.3rem;
   }
@@ -414,13 +469,13 @@ html, body {
   transition: all 0.2s ease;
 
   &.cyan {
-    background: rgba(45, 212, 191, 0.14);
-    border: 1px solid rgba(45, 212, 191, 0.35);
-    color: var(--accent-teal);
+    background: rgba(56, 189, 248, 0.14);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: var(--accent-blue);
   }
   &.indigo {
-    background: rgba(6, 182, 212, 0.14);
-    border: 1px solid rgba(6, 182, 212, 0.35);
+    background: rgba(34, 211, 238, 0.14);
+    border: 1px solid rgba(34, 211, 238, 0.35);
     color: #67e8f9;
   }
   &.emerald {
@@ -451,8 +506,8 @@ html, body {
 }
 
 .skill-category-card {
-  background: rgba(12, 33, 38, 0.6);
-  border: 1px solid rgba(45, 212, 191, 0.18);
+  background: rgba(14, 28, 48, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.18);
   border-radius: 12px;
   padding: 1.25rem;
 
@@ -475,8 +530,8 @@ html, body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  background: rgba(12, 33, 38, 0.7);
-  border: 1px solid rgba(45, 212, 191, 0.22);
+  background: rgba(14, 28, 48, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.22);
   border-radius: 12px;
   padding: 1.25rem;
   margin: 1.5rem 0 2rem 0;
@@ -503,8 +558,8 @@ html, body {
    ========================================================================== */
 
 .highlight-box {
-  background: rgba(45, 212, 191, 0.08);
-  border-left: 4px solid var(--accent-teal);
+  background: rgba(56, 189, 248, 0.08);
+  border-left: 4px solid var(--accent-blue);
   border-radius: 0 8px 8px 0;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
@@ -516,20 +571,6 @@ html, body {
 }
 
 /* ==========================================================================
-   Author Profile Sidebar Avatar Styling
-   ========================================================================== */
-
-.author__avatar img {
-  border: 2px solid var(--accent-teal);
-  box-shadow: 0 0 16px rgba(45, 212, 191, 0.35);
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
-/* ==========================================================================
    Experience / Resume Timeline
    ========================================================================== */
 
@@ -537,7 +578,7 @@ html, body {
   position: relative;
   margin: 2rem 0;
   padding-left: 1.5rem;
-  border-left: 2px solid rgba(45, 212, 191, 0.25);
+  border-left: 2px solid rgba(56, 189, 248, 0.25);
 
   .timeline-item {
     position: relative;
@@ -551,8 +592,8 @@ html, body {
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: var(--accent-teal);
-      box-shadow: 0 0 10px rgba(45, 212, 191, 0.8);
+      background: var(--accent-blue);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
     }
 
     .timeline-title {
@@ -564,7 +605,7 @@ html, body {
 
     .timeline-meta {
       font-size: 0.85rem;
-      color: var(--accent-teal);
+      color: var(--accent-blue);
       font-weight: 500;
       margin-bottom: 0.75rem;
     }
@@ -577,3 +618,16 @@ html, body {
   }
 }
 
+/* ==========================================================================
+   Author Profile Sidebar Avatar Styling
+   ========================================================================== */
+
+.author__avatar img {
+  border: 2px solid var(--accent-blue);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
