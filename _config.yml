@@ -3,11 +3,12 @@ minimal_mistakes_skin: "dark" # or "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale: "en-US"
-title: "Eugenio Pasos"
+title: "Eugenio Pasos - Robotics and Electrical Engineer"
+masthead_title: "Eugenio Pasos - Robotics and Electrical Engineer"
 title_separator: "|"
-subtitle: "Electrical & Robotics Engineer"
+subtitle: "Robotics and Electrical Engineer"
 name: "Eugenio Pasos"
-description: "Portfolio of Eugenio Pasos — Electrical & Robotics Engineer specializing in autonomous systems, ROS 2, computer vision, and embedded firmware."
+description: "Portfolio of Eugenio Pasos — Robotics and Electrical Engineer specializing in autonomous systems, ROS 2, computer vision, and embedded firmware."
 url: "https://eugeniopasos.github.io"
 baseurl: ""
 repository: "eugeniopasos/eugeniopasos.github.io"
@@ -24,7 +25,7 @@ words_per_minute: 200
 author:
   name: "Eugenio Pasos"
   avatar: "/assets/images/avatar.png"
-  bio: "Electrical & Robotics Engineer specializing in autonomous mobile robots (ROS 2/Nav2), embedded firmware (STM32/CAN), and vision-based manipulation."
+  bio: "Robotics and Electrical Engineer specializing in autonomous mobile robots (ROS 2/Nav2), embedded firmware (STM32/CAN), and vision-based manipulation."
   location: "United States"
   links:
     - label: "GitHub"

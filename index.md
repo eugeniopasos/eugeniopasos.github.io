@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-title: "Electrical & Robotics Engineer"
+title: "Robotics and Electrical Engineer"
 feature_row:
   - image_path: /assets/images/teleop.jpg
     alt: "Robotic Arm and Hand Teleoperation"
