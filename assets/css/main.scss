@@ -445,24 +445,26 @@ html, body {
 }
 
 .feature__item .archive__item-excerpt {
+  display: block !important;
   color: #94a3b8 !important;
   font-size: 0.88rem !important;
   line-height: 1.45 !important;
-  margin-top: 0 !important;
+  margin-top: 0.25rem !important;
   margin-bottom: 0 !important;
   text-align: left !important;
   width: 100% !important;
 
   p {
+    display: block !important;
     margin: 0 !important;
     text-align: left !important;
+    color: #94a3b8 !important;
   }
 }
 
-/* Remove the 'View Case Study' button and its container completely */
+/* Remove only the 'View Case Study' button, keeping the description fully visible */
 .feature__item .archive__item-body .btn,
-.feature__item .archive__item-body p:has(.btn),
-.feature__item .archive__item-body p:last-child {
+.feature__item .archive__item-body > p {
   display: none !important;
 }
 
