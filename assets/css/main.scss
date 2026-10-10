@@ -338,14 +338,24 @@ html, body {
   background: var(--card-bg) !important;
   border: 1px solid var(--card-border) !important;
   border-radius: 12px !important;
-  padding: 0.75rem 0.95rem !important; /* Compact padding so image fills tile height */
+  padding: 0.65rem 0.85rem !important; /* Sleek compact padding closely matching image height */
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+  position: relative !important; /* Enables full tile clickability */
+  cursor: pointer !important;
 
   &:hover {
     transform: translateY(-3px) !important;
     border-color: var(--card-hover-border) !important;
-    box-shadow: 0 8px 24px rgba(4, 14, 28, 0.7), 0 0 16px rgba(56, 189, 248, 0.2) !important;
+    box-shadow: 0 8px 24px rgba(4, 14, 28, 0.7), 0 0 16px rgba(56, 189, 248, 0.25) !important;
+
+    .archive__item-title a {
+      color: var(--accent-blue) !important;
+    }
+
+    img {
+      transform: scale(1.04) !important;
+    }
   }
 }
 
@@ -355,7 +365,6 @@ html, body {
   flex-direction: row !important;
   align-items: center !important;
   width: 100% !important;
-  height: 100% !important;
   gap: 1.15rem !important;
   margin: 0 !important;
 
@@ -365,14 +374,14 @@ html, body {
   }
 }
 
-/* Left-Aligned Square Image: Almost as tall as the entire tile height */
+/* Left-Aligned Square Image: Sized to match tile height closely */
 .feature__item-teaser,
 .feature__item .archive__item-teaser {
-  flex: 0 0 175px !important;
-  width: 175px !important;
-  height: 175px !important;
-  min-width: 175px !important;
-  min-height: 175px !important;
+  flex: 0 0 140px !important;
+  width: 140px !important;
+  height: 140px !important;
+  min-width: 140px !important;
+  min-height: 140px !important;
   aspect-ratio: 1 / 1 !important;
   overflow: hidden !important;
   border-radius: 10px !important;
@@ -392,10 +401,6 @@ html, body {
     border-radius: 8px !important;
     transition: transform 0.3s ease !important;
   }
-
-  &:hover img {
-    transform: scale(1.04) !important;
-  }
 }
 
 /* Left-Aligned Content Bordering the Right Side of the Image */
@@ -403,17 +408,17 @@ html, body {
   display: flex !important;
   flex-direction: column !important;
   flex: 1 1 auto !important;
-  justify-content: space-between !important;
-  align-items: flex-start !important; /* Strictly left-aligned */
-  text-align: left !important;         /* Strictly left-aligned */
+  justify-content: center !important;
+  align-items: flex-start !important;
+  text-align: left !important;
   min-width: 0 !important;
-  padding: 0.2rem 0 !important;
+  padding: 0.1rem 0 !important;
 }
 
 .feature__item .archive__item-title {
   margin-top: 0 !important;
   margin-bottom: 0.35rem !important;
-  font-size: 1.18rem !important;
+  font-size: 1.15rem !important;
   font-weight: 700 !important;
   line-height: 1.25 !important;
   color: var(--text-head) !important;
@@ -423,9 +428,18 @@ html, body {
   a {
     color: var(--text-head) !important;
     text-decoration: none !important;
+    transition: color 0.2s ease !important;
 
-    &:hover {
-      color: var(--accent-blue) !important;
+    /* Stretch link to make ENTIRE card clickable */
+    &::after {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      z-index: 10 !important;
+      cursor: pointer !important;
     }
   }
 }
@@ -435,7 +449,7 @@ html, body {
   font-size: 0.88rem !important;
   line-height: 1.45 !important;
   margin-top: 0 !important;
-  margin-bottom: 0.75rem !important;
+  margin-bottom: 0 !important;
   text-align: left !important;
   width: 100% !important;
 
@@ -445,18 +459,11 @@ html, body {
   }
 }
 
+/* Remove the 'View Case Study' button and its container completely */
+.feature__item .archive__item-body .btn,
+.feature__item .archive__item-body p:has(.btn),
 .feature__item .archive__item-body p:last-child {
-  margin-top: auto !important;
-  margin-bottom: 0 !important;
-  text-align: left !important;
-  width: 100% !important;
-}
-
-.feature__item .archive__item-body .btn {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  display: inline-block !important;
-  align-self: flex-start !important;
+  display: none !important;
 }
 
 /* ==========================================================================

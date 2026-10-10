@@ -7,29 +7,21 @@ feature_row:
     title: "Robotic Arm & Hand Teleoperation"
     excerpt: "3D vision-based arm and dexterous hand teleoperation proof-of-concept utilizing MediaPipe landmark tracking, ROS 2, and low-latency joint mapping."
     url: "/projects/teleop/"
-    btn_class: "btn--primary"
-    btn_label: "View Case Study"
   - image_path: /assets/images/AMR.png
     alt: "Autonomous Mapping Rover"
     title: "Autonomous Mapping Rover (AMR)"
     excerpt: "Omnidirectional 4WD Mecanum indoor mapping robot featuring RPLiDAR, IMU, Kalman filtering, slam_toolbox, and the Nav2 navigation stack."
     url: "/projects/rover/"
-    btn_class: "btn--primary"
-    btn_label: "View Case Study"
   - image_path: /assets/images/pick_and_place.jpg
     alt: "Vision Pick and Place Robot"
     title: "Autonomous Vision Pick & Place"
     excerpt: "Multi-DOF robotic manipulator performing automated color-based sorting and classification using OpenCV, Inverse Kinematics (IK), and state-machine control."
     url: "/projects/pick_and_place/"
-    btn_class: "btn--primary"
-    btn_label: "View Case Study"
   - image_path: /assets/images/mock_driving.png
     alt: "Mock Driving Simulator"
     title: "Automotive Mock Driving Simulator"
     excerpt: "Embedded Hardware-in-the-Loop (HIL) simulator integrating an OEM automotive cluster, drive-by-wire pedal ADC, and dual STM32 MCUs over CAN, SPI, and I2C."
     url: "/projects/mock_driving_simulator/"
-    btn_class: "btn--primary"
-    btn_label: "View Case Study"
 ---
 
 <div class="hero-banner">
