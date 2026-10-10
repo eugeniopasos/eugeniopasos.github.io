@@ -50,6 +50,10 @@ footer:
       icon: "fas fa-fw fa-envelope"
       url: "mailto:eugiep@gmail.com"
 
+# Atom/RSS Feed
+atom_feed:
+  hide: true
+
 # Default front matter values
 defaults:
   - scope:
@@ -60,7 +64,7 @@ defaults:
       author_profile: true
       read_time: false
       comments: false
-      share: true
+      share: false
       related: false
   - scope:
       path: "projects"
@@ -70,5 +74,5 @@ defaults:
       author_profile: true
       read_time: false
       comments: false
-      share: true
+      share: false
       related: false

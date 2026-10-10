@@ -247,6 +247,15 @@ html, body {
   }
 }
 
+/* Completely remove 'Share on' section and RSS/Atom 'Feed' links */
+.page__share,
+.page__footer-follow li:has(a[href*="feed"]),
+.page__footer-follow a[href*="feed"],
+.page__footer-follow .fa-rss,
+.page__footer-follow .fa-rss-square {
+  display: none !important;
+}
+
 /* ==========================================================================
    Hero Intro Banner
    ========================================================================== */
