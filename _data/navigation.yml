@@ -1,0 +1,12 @@
+# Main Navigation Links for Minimal Mistakes
+main:
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /projects/
+  - title: "About"
+    url: /about/
+  - title: "Resume"
+    url: /resume/
+  - title: "Contact"
+    url: /contact/
