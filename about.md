@@ -59,6 +59,6 @@ Building reliable robotics hardware requires rigorous benchtop testing and itera
 
 <div class="highlight-box">
   <p>
-    <strong>Interested in collaborating or discussing an opportunity?</strong> Check out my <a href="/projects/">Project Case Studies</a>, review my <a href="/resume/">Resume</a>, or reach out directly through the <a href="/contact/">Contact page</a>.
+    <strong>Interested in collaborating or discussing an opportunity?</strong> Check out my featured projects on the <a href="/#featured-projects">Home page</a>, review my <a href="/resume/">Resume</a>, or reach out directly through the <a href="/contact/">Contact page</a>.
   </p>
 </div>

@@ -20,7 +20,7 @@ feature_row:
   - image_path: /assets/images/mock_driving.png
     alt: "Mock Driving Simulator"
     title: "Automotive Mock Driving Simulator"
-    excerpt: "Embedded Hardware-in-the-Loop (HIL) simulator integrating an OEM automotive cluster, drive-by-wire pedal ADC, and dual STM32 MCUs over CAN, SPI, and I2C."
+    excerpt: "Automotive embedded systems project integrating an OEM cluster, drive-by-wire pedal ADC, and dual STM32 MCUs over CAN, SPI, and I2C."
     url: "/projects/mock_driving_simulator/"
 ---
 
@@ -31,7 +31,7 @@ feature_row:
     Welcome to my engineering portfolio. I specialize in designing and prototyping end-to-end autonomous systems — spanning <strong>real-time embedded firmware (STM32/CAN)</strong>, <strong>ROS 2 navigation & SLAM</strong>, and <strong>computer vision-driven manipulation</strong>. From circuit design and sensor integration to high-level motion planning, I build robust systems that interact dynamically with the physical world.
   </p>
   <div class="hero-actions">
-    <a href="/projects/" class="btn--primary">Browse All Projects</a>
+    <a href="#featured-projects" class="btn--primary">View Featured Projects</a>
     <a href="/resume/" class="btn--inverse">View Resume & Experience</a>
     <a href="/contact/" class="btn--inverse">Contact Me</a>
   </div>
@@ -56,7 +56,7 @@ feature_row:
   </div>
 </div>
 
-## Featured Engineering Projects
+## Featured Engineering Projects {#featured-projects}
 
 A selection of robotics and embedded engineering projects demonstrating end-to-end integration:
 
@@ -125,6 +125,6 @@ A selection of robotics and embedded engineering projects demonstrating end-to-e
 
 <div class="highlight-box">
   <p>
-    <strong>Looking for detailed documentation?</strong> Each project contains in-depth breakdowns including system architectures, hardware schematics, software pipelines, and implementation challenges. Visit the <a href="/projects/">Projects Gallery</a> or check out my <a href="/resume/">Experience & Resume</a>.
+    <strong>Looking for detailed documentation?</strong> Each project above contains in-depth breakdowns including system architectures, hardware schematics, software pipelines, and implementation challenges. You can also review my complete work history on my <a href="/resume/">Experience & Resume</a> page.
   </p>
 </div>

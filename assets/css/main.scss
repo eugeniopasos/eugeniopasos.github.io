@@ -404,7 +404,8 @@ html, body {
 }
 
 /* Left-Aligned Content Bordering the Right Side of the Image */
-.feature__item .archive__item-body {
+.feature__item .archive__item-body,
+.archive__item .archive__item-body {
   display: flex !important;
   flex-direction: column !important;
   flex: 1 1 auto !important;
@@ -412,16 +413,20 @@ html, body {
   align-items: flex-start !important;
   text-align: left !important;
   min-width: 0 !important;
-  padding: 0.1rem 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .feature__item h2.archive__item-title,
-.feature__item .archive__item-title {
+.feature__item .archive__item-title,
+.page__content .feature__item .archive__item-title,
+.page__content .archive__item .archive__item-title,
+.archive__item-title {
   margin-top: 0 !important;
-  margin-bottom: 0.15rem !important; /* Smaller, tight spacing below title */
+  margin-bottom: 0.1rem !important; /* Extremely tight, minimal spacing below title */
   font-size: 1.15rem !important;
   font-weight: 700 !important;
-  line-height: 1.25 !important;
+  line-height: 1.2 !important;
   color: var(--text-head) !important;
   text-align: left !important;
   width: 100% !important;
@@ -445,29 +450,36 @@ html, body {
   }
 }
 
-.feature__item .archive__item-excerpt {
+.feature__item .archive__item-excerpt,
+.page__content .feature__item .archive__item-excerpt,
+.archive__item .archive__item-excerpt,
+.archive__item-excerpt {
   display: -webkit-box !important;
   -webkit-line-clamp: 3 !important;
   line-clamp: 3 !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-  max-height: 4.4em !important; /* 3 lines maximum */
+  max-height: 4.35em !important; /* Strict 3 lines maximum */
   color: #94a3b8 !important;
   font-size: 0.88rem !important;
   line-height: 1.45 !important;
-  margin-top: 0 !important; /* No top gap, sits snugly below title */
+  margin-top: 0 !important; /* Zero top gap, directly bordering title */
   margin-bottom: 0 !important;
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
   text-align: left !important;
   width: 100% !important;
 
-  p {
+  p, & > p {
     display: inline !important;
     margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     padding: 0 !important;
     text-align: left !important;
     color: #94a3b8 !important;
+    line-height: inherit !important;
   }
 }
 
