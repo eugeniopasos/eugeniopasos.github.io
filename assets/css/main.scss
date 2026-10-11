@@ -415,9 +415,10 @@ html, body {
   padding: 0.1rem 0 !important;
 }
 
+.feature__item h2.archive__item-title,
 .feature__item .archive__item-title {
   margin-top: 0 !important;
-  margin-bottom: 0.35rem !important;
+  margin-bottom: 0.15rem !important; /* Smaller, tight spacing below title */
   font-size: 1.15rem !important;
   font-weight: 700 !important;
   line-height: 1.25 !important;
@@ -445,18 +446,26 @@ html, body {
 }
 
 .feature__item .archive__item-excerpt {
-  display: block !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-height: 4.4em !important; /* 3 lines maximum */
   color: #94a3b8 !important;
   font-size: 0.88rem !important;
   line-height: 1.45 !important;
-  margin-top: 0.25rem !important;
+  margin-top: 0 !important; /* No top gap, sits snugly below title */
   margin-bottom: 0 !important;
+  padding-top: 0 !important;
   text-align: left !important;
   width: 100% !important;
 
   p {
-    display: block !important;
+    display: inline !important;
     margin: 0 !important;
+    padding: 0 !important;
     text-align: left !important;
     color: #94a3b8 !important;
   }
